@@ -1,0 +1,29 @@
+# general
+seed: 42
+workers: 8
+
+# mul head
+num_head: 4
+loss_num: 3
+
+# train options
+batch_size: 64
+class_num: 10
+test_batch_size: 100
+image_size: 224
+start_epoch: 0
+max_epochs: 300
+dataset: "STL-10" # CIFAR-10  STL-10
+
+# model options
+resnet: "ResNet34" # ResNet18 / ResNet34 / ResNet50
+feature_dim: 128
+model_path: "save/STL-10"   # 
+model_save_name: "model_best"
+model_load_name: ""  # checkpoint_1000.tar
+best_acc: 0.0
+
+# loss options
+learning_rate: 0.00001
+weight_decay: 0.0001
+zeta: 0.6
