@@ -22,7 +22,7 @@ class Network_Mul(nn.Module):
         resnet = models.resnet34(pretrained=True)
         self.features = nn.Sequential(*list(resnet.children())[:-2])
         
-        # mutil head
+        # multi head
         for i in range(num_head):
             setattr(self, "cat_head%d" % i, CrossAttentionHead())
 
